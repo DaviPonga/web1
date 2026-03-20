@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{border: 1px solid rgb(0, 0, 0);margin: 0px; padding: 0px;}
+        #container{position: relative;}
+        .box{display:inline-block;
+            width: 100px;
+            border-color: black;
+            height: 100px;
+            }
+        #box1{background-color: rgb(94, 243, 26);
+        position: relative;
+        top: 100px;
+        left:150px;
+        }
+        #box2{background-color: rgb(43, 135, 255);
+        position:static;
+        top: 100px;
+        }
+        #box3{background-color: rgb(228, 64, 243);
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        }
+        #box4{background-color: rgb(250, 237, 51);
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        #box5{background-color: rgb(240, 59, 59);
+        }
+        span:last-child{background-color: blue;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 100px;"></div>
+
+    <div id="container">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+        <span class="box">6</span>
+    </div>
+</body>
+</html>
