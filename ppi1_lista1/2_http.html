@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Protocolo HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Protocolo HTTP</h1>
+
+<div class="box">
+    <h2>O que é HTTP?</h2>
+    <p>
+        O HTTP (HyperText Transfer Protocol) é basicamente a forma que os computadores usam
+        para se comunicar na internet. É ele que permite que o navegador (como Chrome, Edge, etc)
+        peça informações para um servidor.
+    </p>
+
+    <p>
+        Por exemplo: quando você digita um site, o seu navegador manda uma requisição pedindo
+        aquela página. O servidor recebe isso e manda de volta a resposta com o conteúdo.
+    </p>
+</div>
+
+<div class="box">
+    <h2>Como funciona?</h2>
+    <p>
+        O HTTP funciona com um sistema simples: pedido e resposta.
+    </p>
+
+    <img src="./Imagens/Simplified_diagram_of_an_HTTP_transaction.png" alt="Diagrama HTTP">
+
+    <p>
+        O navegador (cliente) faz um pedido → o servidor recebe → e responde com o que foi pedido.
+    </p>
+</div>
+
+<div class="box">
+    <h2>Exemplo de Requisição HTTP</h2>
+
+<pre>
+GET /index.html HTTP/1.1
+Host: www.exemplo.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+</pre>
+<img src="./Imagens/HTTP_Response.png" alt="Resposta HTTP">
+
+    <h3>Explicação:</h3>
+    <ul>
+        <li><b>GET</b> → tipo de requisição (aqui ele está pedindo dados)</li>
+        <li><b>/index.html</b> → arquivo que está sendo solicitado</li>
+        <li><b>HTTP/1.1</b> → versão do protocolo</li>
+        <li><b>Host</b> → qual site está sendo acessado</li>
+        <li><b>User-Agent</b> → qual navegador está fazendo o pedido</li>
+        <li><b>Accept</b> → tipo de conteúdo que o navegador aceita</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Exemplo de Response HTTP</h2>
+
+<pre>
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1024
+
+&lt;html&gt;
+    &lt;body&gt;Olá mundo&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+    <h3>Explicação:</h3>
+    <ul>
+        <li><b>HTTP/1.1</b> → versão usada</li>
+        <li><b>200 OK</b> → significa que deu tudo certo</li>
+        <li><b>Content-Type</b> → tipo do conteúdo enviado</li>
+        <li><b>Content-Length</b> → tamanho da resposta</li>
+        <li><b>Body</b> → conteúdo que foi enviado (a página em si)</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Códigos de Status HTTP</h2>
+    <ul>
+        <li><b>200</b> → tudo certo</li>
+        <li><b>404</b> → página não encontrada</li>
+        <li><b>500</b> → erro no servidor</li>
+    </ul>
+
+    <img src="./Imagens/erro.jpg" alt="Erro HTTP">
+</div>
+
+<div class="box">
+    <h2>Conclusão</h2>
+    <p>
+        O HTTP é essencial para a internet funcionar. É através dele que acontece toda a troca
+        de informações entre o navegador e os servidores. Sem ele, basicamente nenhum site abriria.
+    </p>
+</div>
+
+</body>
+</html>
