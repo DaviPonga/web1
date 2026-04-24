@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    .container{display: grid ;
+        height: 100vh;
+        grid-template-areas: "header header header"
+                             "main . sidebar"
+                             "footer footer footer";
+    }
+    @media (max-width:500px) {
+        .container{display: grid ;
+        height: 100vh;
+        grid-template-areas: "header"
+                             "main"
+                             "sidebar"
+                             "footer";
+    }
+        
+ }
+    .box{border: 2px solid black;
+    display: flex;justify-content: center;align-items: center;border-radius: 5%;}
+    
+    #box1{grid-area: header;
+    background-color: orange;}
+    #box2{grid-area: main;
+    background-color: lightblue;}
+    #box3{grid-area: sidebar;
+    background-color: red;}
+    #box4{grid-area: footer;
+    background-color: lightgreen;}
+   </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1"><h2>header</h2></div>
+    <div class="box" id="box2"><h2>main</h2></div>
+    <div class="box" id="box3"><h2>sidebar</h2></div>
+    <div class="box" id="box4"><h2>footer</h2></div>
+
+</body>
+</html>

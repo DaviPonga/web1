@@ -7,6 +7,8 @@ body{
     align-items: center;
     height: 100vh;
     background-color: #ccc;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .fundo{
     width: 300px;
@@ -35,8 +37,7 @@ body{
     border-radius: 20px;
     width: 500px;
     height: 300px;
-    object-fit: cover;
-    
+   
 }
 .Segunda{
     display: flex;
@@ -46,51 +47,6 @@ body{
     width: 60px;
     height: 300px;
     border-radius: 40px;
-    object-fit: cover;
-    transition: 0.4s;
+
 }
-.Outros img:hover .Outros img{
-    width: 50px;
-}
-.Outros img:hover{
-    width: 200px;
-}
-.Primeira img{
-    transition: 0.3s;
-}
-.Primeira img:hover{
-    transform: scale(1.05);
-}
-.container3{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-.Header{
-    background-color: #9acd32;
-    padding: 20px;
-    height:60px;
-}
-.Principal{
-    display: flex;
-    flex: 1;
-}
-.article{
-    flex: 3;
-    background-color:white;
-    padding: 20px;
-}
-.aside{
-    flex: 1;
-    background-color: #f5f5dc;
-    padding: 20px;
-}
-.nav{
-    background-color: #d3e4d3;
-    padding: 20px;
-}
-.footer{
-    background-color: #9acd32;
-    padding: 20px;
-    height:60px;
-}
+

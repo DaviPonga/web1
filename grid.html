@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{display: grid;
+            grid-template-rows: 100px 200px 30vh;
+            grid-template-areas: "cabecario cabecario cabecario"
+                                 "menusite principal principal"  
+                                 "rodapé rodapé rodapé"  
+                                 ;
+        }
+        .box{border: 1px solid black;}
+        #box1{grid-area: cabecario;}
+        #box2{grid-area: menusite;}
+        #box3{grid-area: principal;}
+        #box10{grid-area: rodapé;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1"><h3>Cabecalho</h3></div>
+    <div class="box" id="box2"><h4>2</h4></div>
+    <div class="box" id="box3"><h2>3</h2></div>
+    <div class="box" id="box4">4</div>
+    <div class="box" id="box5">5</div>
+
+    </div>
+</body>
+</html>
