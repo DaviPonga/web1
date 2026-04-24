@@ -1,4 +1,4 @@
-/* Base */
+
 body {
     margin: 0;
     padding: 0;
@@ -7,18 +7,17 @@ body {
     color: #2c3e50;
 }
 
-/* Títulos */
+
 h1, h2, h3 {
     color: #34495e;
 }
 
-/* Container */
+
 .container {
     width: 80%;
     margin: auto;
 }
 
-/* Menu */
 nav {
     background-color: #2c3e50;
     padding: 10px;
@@ -32,13 +31,12 @@ nav a {
     padding: 8px;
 }
 
-/* Hover links */
+
 nav a:hover {
     background-color: #3498db;
     border-radius: 5px;
 }
 
-/* Box (HTTP) */
 .box {
     background: #ffffff;
     padding: 15px;
@@ -47,14 +45,14 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Imagens */
+
 img {
     max-width: 500px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-/* Código */
+
 pre {
     background: #1e272e;
     color: #00ff9c;
@@ -63,7 +61,6 @@ pre {
     overflow-x: auto;
 }
 
-/* Tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -84,19 +81,17 @@ td {
     color: #2c3e50;
 }
 
-/* Linhas alternadas */
 tr:nth-child(even) {
     background-color: #ecf0f1;
 }
 
-/* Imagem do Tim */
 #Tim {
     border-radius: 100px;
     border: 3px solid #3498db;
     width: 300px;
 }
 
-/* Formulário */
+
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -105,7 +100,6 @@ input, textarea {
     border: 1px solid #bdc3c7;
 }
 
-/* Botão */
 button {
     margin-top: 10px;
     padding: 10px;
@@ -116,7 +110,6 @@ button {
     cursor: pointer;
 }
 
-/* Hover botão */
 button:hover {
     background-color: #2980b9;
 }

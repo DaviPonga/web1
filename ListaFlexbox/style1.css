@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+.container-Grid{
+    display: grid;
+    gap: 15px;
+    height: 90vh;
+    
+    grid-template-columns: repeat(4, 1fr);
+    
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas: 
+        "lar-t  rosa  v-cla  v-cla"
+        "azul   rosa  v-esc  bolas"
+        "lar-b  lar-b v-esc  bolas";
+}
+
+.laranja-topo  { grid-area: lar-t; background-color: #f39c12; }
+.azul          { grid-area: azul;  background-color: #bdc3c7; }
+.laranja-baixo { grid-area: lar-b; background-color: #f1b233; }
+.rosa          { grid-area: rosa;  background-color: #f1948a; height: 100%; }
+.verde-claro   { grid-area: v-cla; background-color: #d1e1d1; }
+.verde-escuro  { grid-area: v-esc; background-color: #a9c379; }
+.bolinhas      { grid-area: bolas; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+
+.bolinhas span {
+    width: 30px; height: 30px; border-radius: 50%;
+}
+.bolinhas span:nth-child(1) { background: #f1948a; }
+.bolinhas span:nth-child(2) { background: #b18282; }
+.bolinhas span:nth-child(3) { background: #c1d1a1; }
+.bolinhas span:nth-child(4) { background: #d1c1e1; }
+
+.bloco {
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: none;
+        height: auto;
+    }
+
+    .bloco {
+        height: 150px;
+        grid-area: auto;
+    }
+    
+    .bolinhas {
+        flex-direction: row; 
+        height: 60px;
+    }
+}
