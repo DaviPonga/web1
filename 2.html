@@ -1,0 +1,35 @@
+<!--CSS é uma linguagem de estilo utilizado para apresentação do visual do site,controlando layout,suas cores,fontes e espaçamentos.Composta por Seletor que indica a quais elementos a regra será aplicada exemplo um button,Propriedades que coloca caracteristicas visuais que serão alterar após alguma ação por exemplo a cor de um button que era azul para vermelho apos clique,Valores definem como cada propriedade será aplicada.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes mudançaCor{
+            from{
+                background-color: blueviolet;
+            }
+            to{
+                background-color: green;
+            }
+        }
+        button{background-color: blueviolet;
+        color: white;
+        border-radius: 10px;
+    }
+    button:hover{
+        animation: mudançaCor 0.5 forwards;
+    }
+    button::before{
+        content: "😈";
+    }
+
+    </style>
+</head>
+
+<body>
+    <button>Clique Aqui!</button>
+</body>
+</html>
