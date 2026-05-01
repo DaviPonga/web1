@@ -1,116 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bandeiras</title>
+
     <style>
         body{
             background-color: rgb(223, 223, 233);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        h1{
+            margin: 10px 0;
+        }
+
         .Fundo{
             background-color: white;
-            margin-top: 130px;
-            position: relative;
             width: 410px;
-            left: 240px;
             height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 50px;
         }
-        .Vermelho{
+
+        .VermelhoJ{
             background-color: red;
-            position: relative;
-            border-radius: 100%;
+            border-radius: 50%;
             width: 90px;
             height: 90px;
         }
-        h1{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+
         .BandeiraA{
-            background-color: white;
-            margin-top: 130px;
-            position: relative;
             width: 410px;
-            left: 240px;
             height: 200px;
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-direction: column;
+            margin-top: 50px;
         }
-        #Linha1{
-            width: 410px;
-            height: 200px;
-            background: black;
+
+        .linha{
+            flex: 1;
         }
-        #Linha2{
+
+        .pretoA{ background: black; }
+        .vermelhoA{ background: red; }
+        .amareloA{ background: yellow; }
+
+        .BandeiraF{
             width: 410px;
-            height: 200px;
-            background: red;
-        }
-        #Linha3{
-            width: 410px;
-            height: 200px;
-            background: yellow;
-        }
-         .BandeiraF{
-            background-color: white;
-            margin-top: 130px;
-            position: relative;
-            width: 410px;
-            left: 240px;
             height: 200px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-        #FLinha1{
-            width: 410px;
-            height: 200px;
-            background: rgb(0, 4, 248);
-        }
-        #FLinha2{
-            width: 410px;
-            height: 200px;
-            background: rgb(255, 255, 255);
-        }
-        #FLinha3{
-            width: 410px;
-            height: 200px;
-            background: rgb(255, 0, 0);
+            margin-top: 50px;
         }
 
+        .coluna{
+            flex: 1;
+        }
+
+        .azulF{ background: blue; }
+        .brancoF{ background: white; }
+        .vermelhoF{ background: red; }
 
     </style>
 </head>
-<body>
-    <div class="Fundo">
-        <div class="Vermelho">
 
-        </div>
+<body>
+
+    <div class="Fundo">
+        <div class="VermelhoJ"></div>
     </div>
-    <h1>-Bandeira Do Japão</h1>
+    <h1>Bandeira do Japão</h1>
 
     <div class="BandeiraA">
-        <div id="Linha1"></div>
-        <div id="Linha2"></div>
-        <div id="Linha3"></div>
+        <div class="linha pretoA"></div>
+        <div class="linha vermelhoA"></div>
+        <div class="linha amareloA"></div>
     </div>
-    <h1>-Bandeira Do Alemanha</h1>
+    <h1>Bandeira da Alemanha</h1>
 
     <div class="BandeiraF">
-        <div id="FLinha1"></div>
-        <div id="FLinha2"></div>
-        <div id="FLinha3"></div>
+        <div class="coluna azulF"></div>
+        <div class="coluna brancoF"></div>
+        <div class="coluna vermelhoF"></div>
     </div>
-    <h1>-Bandeira Da França</h1>
+    <h1>Bandeira da França</h1>
 
-    
 </body>
 </html>
