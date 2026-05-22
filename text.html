@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #texto{
+            height: 50vh;
+            border: 1px solid rgb(151, 76, 76);
+        }
+        #status{
+            height: 50vh;
+            border: 1px solid black;
+        }
+    </style>
+  
+
+    
+</head>
+<body>
+    <h1 style="border: 1px solid black;">Texto</h1>
+    <div id="texto" style="border: 1px solid black;height: 50vh;"tabindex="0"></div>
+    <div id="status" style="border: 1px solid black;height: 1rem;"></div>
+    <canvas id="canvas" width="1920" height="1080" style="border: 1px solid black;"></canvas>
+    <script>
+
+        var tecla;
+
+        let texto = document.querySelector('#texto');
+
+        let status = document.querySelector('#status');
+
+        let canvas = document.querySelector('#canvas');
+        var mouse;
+        var desenhado = false;
+
+        texto.addEventListener('keypress',(a)  => {
+           tecla =a
+           texto.innerHTML += a.key;
+        })
+        texto.addEventListener('keydown',(e)  => {
+            if(e.key === "Backspace"){
+            texto.innerHTML = texto.innerHTML.slice(0,-1);
+            }
+        });
+        
+        document.addEventListener('keydown',function(event){
+            status.innerHTML = 'Evento Keydown:'+event.key;
+        })
+        document.addEventListener('mousemove',(e)=>{
+            status.innerHTML = 'Evento mousemove:'+e.clientX+','+e.clientY;
+        });
+
+        let ctx = canvas.getContext('2d');
+
+        canvas.addEventListener('mousedown',(e)=>{
+            desenhado = !desenhado;
+            ctx.moveTo(e.offsetX,e.offsetY);
+        })
+        canvas.addEventListener('mouseup',(e)=>{
+        desenhado = !desenhado;
+        })
+        canvas.addEventListener('mousemove',(e)=>{
+             mouse = e;
+            if(desenhado){
+                console.log("mouse"+e.offsetX,e.offsetY);
+                ctx.lineTo(e.offsetX,e.offsetY);
+                ctx.stroke();
+            }
+        })
+
+    </script>
+</body>
+</html>
