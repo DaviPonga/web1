@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eee;
+    padding:30px;
+}
+
+.container{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+}
+
+.a,.b,.c,.grade{
+    background:#444;
+    color:white;
+    padding:20px;
+    border-radius:5px;
+}
+
+.c{
+    height:300px;
+}
+
+.grade{
+    display:grid;
+
+    grid-template-columns:
+    1fr 2fr 1fr;
+
+    gap:10px;
+}
+
+.grade div{
+    background:#ddd;
+    color:black;
+    padding:30px;
+    text-align:center;
+}
