@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    padding:20px;
+}
+
+.container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+    background:#d6e6ff;
+    padding:40px;
+    text-align:center;
+    font-size:22px;
+    border-radius:10px;
+}

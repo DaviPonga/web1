@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>// a) Clique no botão
+document.getElementById("alertButton").onclick = function () {
+    alert("Botão clicado!");
+};
+
+// b) Mostrar tecla digitada
+document.getElementById("textInput").onkeydown = function (event) {
+    console.log(event.key);
+};
+
+// c) Campo recebe foco
+document.getElementById("textInput").onfocus = function () {
+    this.style.backgroundColor = "yellow";
+};
+
+// d) Campo perde foco
+document.getElementById("textInput").onblur = function () {
+    this.style.backgroundColor = "white";
+};
+
+// e) Mouse entra na div
+document.getElementById("hoverDiv").onmouseover = function () {
+    this.style.backgroundColor = "lightblue";
+};
+
+// f) Mouse sai da div
+document.getElementById("hoverDiv").onmouseout = function () {
+    this.style.backgroundColor = "";
+};
+
+// g) Mudar cor da página pelo select
+document.getElementById("colorSelect").onchange = function () {
+    document.body.style.backgroundColor = this.value;
+};
+</script>
+<body>
+
+</body>
+</html>
