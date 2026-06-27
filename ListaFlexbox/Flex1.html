@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Atividade 1 - Flexbox Froggy</title>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+        color: #222;
+    }
+    h1{ margin-bottom: 4px; }
+    h2{
+        margin-top: 28px;
+    }
+    code, pre{
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: "Consolas", monospace;
+    }
+    pre{
+        padding: 12px;
+        overflow-x: auto;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+    }
+    th, td{
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th{ background-color: #f5f5dc; }
+</style>
+</head>
+<body>
+
+<h1>Atividade 1 — Flexbox Froggy</h1>
+<p>Joguei todos os níveis. Abaixo, dois níveis acima do 10 com o CSS usado e o efeito de cada propriedade.</p>
+
+<h2>Nível 13</h2>
+<pre>#pond {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: center;
+}</pre>
+<ul>
+<li><code>flex-direction: row-reverse</code> — inverte a ordem dos itens (o primeiro vai pra direita).</li>
+<li><code>align-items: flex-end</code> — alinha todos no final do eixo vertical (fundo do tabuleiro).</li>
+<li><code>justify-content: center</code> — agrupa os itens no centro do eixo horizontal.</li>
+</ul>
+
+<h2>Nível 17</h2>
+<pre>#pond {
+  display: flex;
+}
+
+.frog-yellow {
+  align-self: flex-end;
+  order: 1;
+}</pre>
+<ul>
+<li><code>align-self: flex-end</code> — alinha só esse item no final do eixo vertical, sem afetar os outros.</li>
+<li><code>order: 1</code> — muda a posição desse item na fila (padrão é 0); quem tem valor maior aparece depois.</li>
+</ul>
+
+</body>
+</html>

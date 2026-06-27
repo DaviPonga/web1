@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Captura de Teclas do Teclado</title>
+</head>
+<body>
+
+  <h1>Captura de Teclas do Teclado</h1>
+
+  <div id="saida"></div>
+
+  <script>
+    document.addEventListener("keydown", function (evento) {
+      document.getElementById("saida").textContent += evento.key + " ";
+      console.log(evento.key);
+    });
+  </script>
+
+</body>
+</html>

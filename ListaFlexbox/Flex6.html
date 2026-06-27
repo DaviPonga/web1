@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividade 6 - Grid Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#e9e9e9;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:20px;
+}
+
+.titulo{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.pagina{
+    background:#fff;
+    padding:15px;
+    border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+
+.grid-wrapper{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.grid-container{
+    flex:1;
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:90px 90px 90px;
+
+    grid-template-areas:
+        "naranja salmao azulclaro"
+        "azul salmao oliva"
+        "naranja2 naranja2 oliva";
+
+    gap:4px;
+}
+
+.naranja{
+    grid-area:naranja;
+    background:#f79b2f;
+}
+
+.salmao{
+    grid-area:salmao;
+    background:#efaa9d;
+}
+
+.azulclaro{
+    grid-area:azulclaro;
+    background:#d6e5e8;
+}
+
+.azul{
+    grid-area:azul;
+    background:#b7c6df;
+}
+
+.oliva{
+    grid-area:oliva;
+    background:#aac36d;
+}
+
+.naranja2{
+    grid-area:naranja2;
+    background:#f7b53c;
+}
+
+.dots{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.dot{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+}
+
+.dot1{background:#ef8750;}
+.dot2{background:#d79ba1;}
+.dot3{background:#aac36d;}
+.dot4{background:#c9b4e4;}
+
+/* RESPONSIVIDADE */
+
+@media (max-width:600px){
+
+    .grid-wrapper{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .grid-container{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(6,80px);
+
+        grid-template-areas:
+            "naranja"
+            "salmao"
+            "azulclaro"
+            "azul"
+            "oliva"
+            "naranja2";
+    }
+
+    .dots{
+        flex-direction:row;
+        justify-content:center;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<h3 class="titulo">6) Usando Grid Layout</h3>
+
+<div class="pagina">
+
+    <div class="grid-wrapper">
+
+        <div class="grid-container">
+
+            <div class="naranja"></div>
+            <div class="salmao"></div>
+            <div class="azulclaro"></div>
+            <div class="azul"></div>
+            <div class="oliva"></div>
+            <div class="naranja2"></div>
+
+        </div>
+
+        <div class="dots">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
